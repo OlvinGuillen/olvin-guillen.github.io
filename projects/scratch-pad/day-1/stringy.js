@@ -80,9 +80,12 @@ E:
 */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-    return string.();
-
-
+    // declare a new variable to a empty string 
+    var str2 = "";
+    //sure replaceAll method to add a dash were there are spaces
+    str2 = string.replaceAll(" ", "-");
+    //return str2 lowercased
+return str2.toLowerCase();
     // YOUR CODE ABOVE HERE //
 }
 
@@ -98,10 +101,11 @@ function toDashCase(string) {
  * TIP: How can you use Array access to your advantage here? How can you
  *      ensure uppercase and lowercase can be compared equally?
  */
+ 
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
-
     
+
 
     // YOUR CODE ABOVE HERE //
 }
