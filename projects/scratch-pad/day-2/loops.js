@@ -12,7 +12,9 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+  for (var i = array.lenght -1; i <= 0; i++){
+    coonsole.log(array[i]);
+  }
   
   
   

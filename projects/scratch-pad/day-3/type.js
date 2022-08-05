@@ -31,8 +31,12 @@ function isArray(value) {
  */
 function isObject(value) {
     // YOUR CODE BELOW HERE //
-    
-    
+    //determine if typeof value strictly 
+    if (typeof value === "object"){
+        return true;
+    } else {
+        return false;
+    }
     
     
     // YOUR CODE ABOVE HERE //
