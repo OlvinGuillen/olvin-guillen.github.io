@@ -11,10 +11,10 @@
 //////////////////////////////////////////////////////////////////////
 // Step 1 - Object Creation //////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-let animal = {};
+var animal = {};
 animal.species = 'lion';
 animal['name'] = 'Leo';
-animal.noise = [];
+animal.noises = [];
 console.log(animal);
 
 
@@ -22,7 +22,7 @@ console.log(animal);
 // Step 2 - Array Creation ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 
-let noises = [];
+var noises = [];
 noises[0] = "Rawwrr";
 noises.push("prr");
 noises.unshift("meow");
@@ -35,10 +35,8 @@ lastElement = noises[noises.length-1];
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Combining Step 1 and 2 ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-for (var i of noises) {
-  animal["noise"].push(i);
-}
-animal["noise"].unshift('grr');
+animal["noises"] = noises
+animal["noises"].unshift('grr');
 console.log(animal);
 
 /* *******************************************************************
@@ -65,12 +63,26 @@ console.log(animal);
 //////////////////////////////////////////////////////////////////////
 var animals = [];
 animals.push(animal)
-console
+console.log(animals)
+var duck = { species: 'duck', name: 'Jerome', noises: ['quack', 'honk', 'sneeze', 'woosh'] }
+animals.push(duck)
+console.log(animals)
+var chicken  = { species: "chicken", name: "little", noises: ['quack', "honk"]}
+var snake = { species: "snake", name: "snack", noises: ["sssss", "woof"]}
+animals.push(chicken)
+animals.push(snake)
+console.log(animals)
+console.log(animals.lenght)
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
-
+//i choose an array because it is easy to work with and you can munipulate the values easy
+var friends =[];
+function getRandom(arr){
+  arr[Math.floor(Math.random() * arr.length)]
+  return arr;
+}
+friendgetRandom(animals)
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
