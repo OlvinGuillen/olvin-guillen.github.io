@@ -14,9 +14,7 @@
  */
 function isArray(value) {
     // YOUR CODE BELOW HERE //
-    
-    
-    
+        return Array.isArray(value);
     
     // YOUR CODE ABOVE HERE //
 }
@@ -32,7 +30,7 @@ function isArray(value) {
 function isObject(value) {
     // YOUR CODE BELOW HERE //
     //determine if typeof value strictly 
-    if (typeof value === "object"){
+    if (Object.keys(value).length > 0){
         return true;
     } else {
         return false;
@@ -50,7 +48,11 @@ function isObject(value) {
  */
 function isCollection(value) {
     // YOUR CODE BELOW HERE //
-    
+    if (Array.isArray(value) || typeof value === "object"){
+        return true;
+    } else {
+        return false;
+    }
     
     
     
