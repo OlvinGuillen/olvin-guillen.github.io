@@ -72,17 +72,27 @@ var snake = { species: "snake", name: "snack", noises: ["sssss", "woof"]}
 animals.push(chicken)
 animals.push(snake)
 console.log(animals)
-console.log(animals.lenght)
+console.log(animals.length)
 //////////////////////////////////////////////////////////////////////
 // Step 7 - Making Friends ///////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 //i choose an array because it is easy to work with and you can munipulate the values easy
-var friends =[];
-function getRandom(arr){
-  arr[Math.floor(Math.random() * arr.length)]
-  return arr;
-}
-friendgetRandom(animals)
+var friends = [];
+ function getRandom(arr){
+ var rando = Math.floor(Math.random() * arr.length);
+  return rando;
+} getRandom(animals);
+
+console.log(getRandom(animals));
+var randoAnimal = getRandom(animals);
+friends.push(animals[randoAnimal]['name']);
+console.log(friends);
+
+animals[0].friends = friends;
+
+//friends(animals[getRandom(animals)]);
+
+
 
 /**
  * Nice work! You're done Part 1. Pat yourself on the back and
