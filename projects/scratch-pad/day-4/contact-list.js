@@ -2,6 +2,8 @@
 
 'use strict';
 
+const { constant } = require("lodash");
+
 /**
  * 4: Contact List
  * 
@@ -35,7 +37,12 @@
 
 // YOUR CODE GOES BELOW HERE //
 function makeContact(id, nameFirst, nameLast) {
-
+    var obj = {
+        id: id,
+        nameFirst: nameFirst,
+        nameLast: nameLast,
+    };  
+    return obj;
 } 
 
 
@@ -43,13 +50,34 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    var contacts;
+    var contacts = [];
     
     return {
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
+        },
+        addContact: function(contact){
+             contacts.push(contact)
+        },
+        findContact: function(fullName){
+            for (var i = 0; i < contacts.length; i++){
+                if (contacts[i].nameFirst + " " + contacts[i].nameLast === fullName){
+                    return contacts[i];
+                }
+            }
+        },
+        removeContact: function(contact){
+            var deleted = false;
+            for (var i = 0; i < contacts.length && !deleted; i++){
+                console.log(contacts[i],contact)
+                if(contacts[i].id === contact.id){
+                    contacts = contacts.splice(i, 1)
+                    deleted = true;
+                }
+            }
         }
+
     }
 }
 
